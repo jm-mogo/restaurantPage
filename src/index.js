@@ -1,1 +1,4 @@
-console.log("Hello")
+import "./style.css";
+import loadPage from "./loadPage.js"
+
+loadPage()
