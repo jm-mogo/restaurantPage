@@ -120,6 +120,16 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
+/***/ "./src/contact.js":
+/*!************************!*\
+  !*** ./src/contact.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadContact)\n/* harmony export */ });\n\nfunction createContact() {\n    const div = document.createElement(\"div\");\n    \n    div.innerHTML = \"Hi this is the contact\"\n\n    return div\n}\n\nfunction loadContact() {\n    return createContact()\n}\n\n//# sourceURL=webpack://restaurantpage/./src/contact.js?");
+
+/***/ }),
+
 /***/ "./src/home.js":
 /*!*********************!*\
   !*** ./src/home.js ***!
@@ -146,7 +156,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadPage)\n/* harmony export */ });\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n\n\n// import loadContact from \"./contact.js\";\n\nfunction createHeader() {\n    let header = document.createElement(\"header\");\n    let title = document.createElement(\"h1\");\n\n    title.textContent = \"La Pizzeria\";\n    title.classList.add(\"title\");\n\n    header.appendChild(title);\n    header.appendChild(createNav());\n\n    return header;\n}\n\nfunction createNav() {\n    const nav = document.createElement(\"nav\");\n\n    nav.appendChild(createButton(\"home\"));\n    nav.appendChild(createButton(\"menu\"));\n    nav.appendChild(createButton(\"contact\"));\n\n    return nav;\n}\n\nfunction createButton(name) {\n    const button = document.createElement(\"button\");\n\n    button.textContent = name;\n    button.classList.add(\"button-nav\");\n\n    return button;\n}\n\nfunction createFooter() {\n    const footer = document.createElement(\"footer\");\n\n    let p = document.createElement(\"p\");\n    p.textContent = \"lolmike\";\n\n    footer.appendChild(p);\n\n    return footer;\n}\n\nfunction createMain() {\n    const main = document.createElement(\"div\");\n    main.classList.add(\"container\");\n    main.setAttribute(\"id\", \"main\")\n\n    return main;\n}\n\nfunction appendElementTodMain(page) {\n    const main = document.getElementById(\"main\")\n    main.innerHTML = \"\"\n    main.appendChild(page())\n}\n\nfunction loadPage() {\n    const content = document.getElementById(\"content\");\n    content.appendChild(createHeader());\n    content.appendChild(createMain());\n    content.appendChild(createFooter())\n    appendElementTodMain(_home_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n}\n\n\n//# sourceURL=webpack://restaurantpage/./src/loadPage.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadPage)\n/* harmony export */ });\n/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./home.js */ \"./src/home.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/menu.js\");\n/* harmony import */ var _contact_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contact.js */ \"./src/contact.js\");\n\n\n\n\nfunction createHeader() {\n    let header = document.createElement(\"header\");\n    let title = document.createElement(\"h1\");\n\n    title.textContent = \"La Pizzeria\";\n    title.classList.add(\"title\");\n\n    header.appendChild(title);\n    header.appendChild(createNav());\n\n    return header;\n}\n\nfunction createNav() {\n    const nav = document.createElement(\"nav\");\n\n    nav.appendChild(createButton(\"home\", _home_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]));\n    nav.appendChild(createButton(\"menu\", _menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]));\n    nav.appendChild(createButton(\"contact\", _contact_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"]));\n\n    return nav;\n}\n\nfunction createButton(name, page) {\n    const button = document.createElement(\"button\");\n\n    button.textContent = name;\n    name += \"Load\"\n    button.classList.add(\"button-nav\");\n    button.addEventListener(\"click\",() => {\n        appendElementTodMain(page)\n    })\n    return button;\n}\n\nfunction createFooter() {\n    const footer = document.createElement(\"footer\");\n\n    let p = document.createElement(\"p\");\n    p.textContent = \"lolmike\";\n\n    footer.appendChild(p);\n\n    return footer;\n}\n\nfunction createMain() {\n    const main = document.createElement(\"div\");\n    main.classList.add(\"container\");\n    main.setAttribute(\"id\", \"main\")\n\n    return main;\n}\n\nfunction appendElementTodMain(page) {\n    const main = document.getElementById(\"main\")\n    main.innerHTML = \"\"\n    main.appendChild(page())\n}\n\nfunction loadPage() {\n    const content = document.getElementById(\"content\");\n    content.appendChild(createHeader());\n    content.appendChild(createMain());\n    content.appendChild(createFooter())\n    appendElementTodMain(_home_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])\n}\n\n\n//# sourceURL=webpack://restaurantpage/./src/loadPage.js?");
 
 /***/ }),
 
@@ -156,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n\nfunction createMenu() {\n    const div = document.createElement(\"div\");\n   \n\n\n}\n\nfunction loadMenu() {\n    return createMenu()\n}\n\n//# sourceURL=webpack://restaurantpage/./src/menu.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ loadMenu)\n/* harmony export */ });\n\nfunction createMenu() {\n    const div = document.createElement(\"div\");\n    \n    div.innerHTML = \"Hi this is the menu\"\n\n    return div\n}\n\nfunction loadMenu() {\n    return createMenu()\n}\n\n//# sourceURL=webpack://restaurantpage/./src/menu.js?");
 
 /***/ }),
 
