@@ -1,6 +1,6 @@
-import loadHome from "./home.js";
-import loadMenu from "./menu.js";
-// import loadContact from "./contact.js";
+import homeLoad from "./home.js";
+import menuLoad from "./menu.js";
+import contactLoad from "./contact.js";
 
 function createHeader() {
     let header = document.createElement("header");
@@ -18,19 +18,22 @@ function createHeader() {
 function createNav() {
     const nav = document.createElement("nav");
 
-    nav.appendChild(createButton("home"));
-    nav.appendChild(createButton("menu"));
-    nav.appendChild(createButton("contact"));
+    nav.appendChild(createButton("home", homeLoad));
+    nav.appendChild(createButton("menu", menuLoad));
+    nav.appendChild(createButton("contact", contactLoad));
 
     return nav;
 }
 
-function createButton(name) {
+function createButton(name, page) {
     const button = document.createElement("button");
 
     button.textContent = name;
+    name += "Load"
     button.classList.add("button-nav");
-
+    button.addEventListener("click",() => {
+        appendElementTodMain(page)
+    })
     return button;
 }
 
@@ -64,5 +67,5 @@ export default function loadPage() {
     content.appendChild(createHeader());
     content.appendChild(createMain());
     content.appendChild(createFooter())
-    appendElementTodMain(loadHome)
+    appendElementTodMain(homeLoad)
 }
