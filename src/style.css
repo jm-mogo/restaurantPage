@@ -83,3 +83,26 @@ footer {
     width: 320px;
     border-radius: 50%;
 }
+
+.img-map {
+    width: 80vw;
+    max-width: 500px;
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.pizza-container {
+    height: 280px;
+    width: 280px;
+    background-color: #000000c7;
+    border-radius: 40px;
+    border: solid 1px grey;
+}
+
+.pizza-order-img {
+    height: 140px;
+}

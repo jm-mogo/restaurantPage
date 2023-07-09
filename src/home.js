@@ -11,7 +11,7 @@ function createChefImg() {
     img.classList.add("img-chef");
     img.setAttribute("src", chef);
 
-    return img
+    return img;
 }
 
 function createHome() {
@@ -19,7 +19,7 @@ function createHome() {
 
     div.appendChild(createTitle("The best pizza you'll ever try"));
     div.appendChild(createTitle("Serving you since 1999"));
-    div.appendChild(createChefImg())
+    div.appendChild(createChefImg());
     return div;
 }
 

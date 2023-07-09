@@ -29,11 +29,11 @@ function createButton(name, page) {
     const button = document.createElement("button");
 
     button.textContent = name;
-    name += "Load"
+    name += "Load";
     button.classList.add("button-nav");
-    button.addEventListener("click",() => {
-        appendElementTodMain(page)
-    })
+    button.addEventListener("click", () => {
+        appendElementTodMain(page);
+    });
     return button;
 }
 
@@ -51,21 +51,21 @@ function createFooter() {
 function createMain() {
     const main = document.createElement("div");
     main.classList.add("container");
-    main.setAttribute("id", "main")
+    main.setAttribute("id", "main");
 
     return main;
 }
 
 function appendElementTodMain(page) {
-    const main = document.getElementById("main")
-    main.innerHTML = ""
-    main.appendChild(page())
+    const main = document.getElementById("main");
+    main.innerHTML = "";
+    main.appendChild(page());
 }
 
 export default function loadPage() {
     const content = document.getElementById("content");
     content.appendChild(createHeader());
     content.appendChild(createMain());
-    content.appendChild(createFooter())
-    appendElementTodMain(homeLoad)
+    content.appendChild(createFooter());
+    appendElementTodMain(homeLoad);
 }
