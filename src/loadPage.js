@@ -6,7 +6,7 @@ function createHeader() {
     let header = document.createElement("header");
     let title = document.createElement("h1");
 
-    title.textContent = "La Pizzeria";
+    title.textContent = "La Pizzería";
     title.classList.add("title");
 
     header.appendChild(title);
