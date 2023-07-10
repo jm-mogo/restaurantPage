@@ -18,9 +18,9 @@ function createHeader() {
 function createNav() {
     const nav = document.createElement("nav");
 
-    nav.appendChild(createButton("home", homeLoad));
-    nav.appendChild(createButton("menu", menuLoad));
-    nav.appendChild(createButton("contact", contactLoad));
+    nav.appendChild(createButton("Home", homeLoad));
+    nav.appendChild(createButton("Menu", menuLoad));
+    nav.appendChild(createButton("Contact", contactLoad));
 
     return nav;
 }
