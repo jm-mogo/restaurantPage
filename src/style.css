@@ -101,6 +101,10 @@ footer {
     background-color: #000000c7;
     border-radius: 40px;
     border: solid 1px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .pizza-order-img {
